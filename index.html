@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Dark_eio</title>
+    <style>
+        /* Body Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #0f0c29; /* Dark Background */
+            background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Glassmorphism Card */
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+        }
+
+        .contact-card h2 {
+            margin: 0 0 10px;
+            color: #00d2ff;
+            font-size: 28px;
+        }
+
+        .contact-card p {
+            font-size: 14px;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        /* Form Fields */
+        .input-field {
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: white;
+            outline: none;
+            box-sizing: border-box; /* Padding handling */
+            transition: 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #00d2ff;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Button Styling */
+        .glow-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .glow-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="contact-card">
+        <h2>Message Me</h2>
+        <p>Direct message to Dark_eio's Email</p>
+
+        <form action="https://formspree.io/f/mzdyedpv" method="POST">
+            
+            <input type="text" name="_gotcha" style="display:none">
+
+            <div class="input-field">
+                <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="input-field">
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="input-field">
+                <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+            </div>
+
+            <button type="submit" class="glow-btn">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html>
